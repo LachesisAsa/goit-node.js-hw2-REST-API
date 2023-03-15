@@ -5,7 +5,7 @@ const validation = (schema, message) => {
     console.log(error);
     if (error) {
       error.status = 400;
-      error.message = message;
+      error.message = message || error.details[0].message;
 
       next(error);
       return;
