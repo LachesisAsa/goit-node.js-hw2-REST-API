@@ -16,7 +16,7 @@ describe("test login controller", () => {
   afterAll(() => server.close());
 
   test("check status, token, type of data params", async () => {
-    const mEmail = "kristuwa15@test.com";
+    const mEmail = "serban9999@gmail.com";
     const mPassword = "test";
 
     const user = {
