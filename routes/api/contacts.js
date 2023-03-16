@@ -45,12 +45,6 @@ router.put(
   validation(joiAddSchema, "missing fields"),
   ctrlWrapper(ctrl.updateById)
 );
-router.patch(
-  "/:contactId/favorite",
-  isValidId,
-  validation(joiUpdateSchema, "missing field favorite"),
-  ctrlWrapper(ctrl.updateStatusContact)
-);
 
 router.patch(
   "/:contactId/favorite",
