@@ -16,6 +16,10 @@ router.post(
   ctrlWrapper(ctrl.signup)
 );
 
+router.get("/verify/:verificationToken", ctrlWrapper(ctrl.verifyEmail));
+
+router.post("/verify", validation(schemas.emailSchema), ctrl.resendVerifyEmail);
+
 router.post("/login", validation(schemas.loginSchema), ctrlWrapper(ctrl.login));
 
 router.get("/current", authenticate, ctrlWrapper(ctrl.getCurrent));
